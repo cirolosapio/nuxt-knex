@@ -1,15 +1,15 @@
 import knex from 'knex'
 
 export default function () {
-  const runtimeConfig = useRuntimeConfig()
+  const { host, database, user, password } = useRuntimeConfig()
 
   return knex({
     client: 'pg',
     connection: {
-      host: runtimeConfig.pgHost,
-      database: runtimeConfig.pgDatabase,
-      user: runtimeConfig.pgUser,
-      password: runtimeConfig.pgPassword
+      host,
+      database,
+      user,
+      password
     }
   })
 }

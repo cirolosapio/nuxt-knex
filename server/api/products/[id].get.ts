@@ -6,9 +6,7 @@ interface Product {
 
 export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, 'id')
-  const product = await knex()<Product>('products')
-    .where('id', id)
-    .first()
-  if (product) return product
-  return event.respondWith(new Response('Not found', { status: 404 }))
+  const db = knex()
+  const product = await db<Product>('products').where('id', id).first()
+  return product ?? event.respondWith(new Response('Not found', { status: 404 }))
 })

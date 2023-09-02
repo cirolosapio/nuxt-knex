@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
-    pgHost: '',
-    pgDatabase: '',
-    pgUser: '',
-    pgPassword: ''
+    host: '',
+    database: '',
+    user: '',
+    password: ''
   }
 })
