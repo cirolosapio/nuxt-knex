@@ -5,10 +5,10 @@ export default {
   development: {
     client: 'pg',
     connection: {
-      host: process.env.NUXT_PG_HOST,
-      database: process.env.NUXT_PG_DATABASE,
-      user: process.env.NUXT_PG_USER,
-      password: process.env.NUXT_PG_PASSWORD
+      host: process.env.NUXT_HOST,
+      database: process.env.NUXT_DATABASE,
+      user: process.env.NUXT_USER,
+      password: process.env.NUXT_PASSWORD
     },
     migrations: {
       directory: 'db/migrations'
