@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
+    "lint": "eslint .",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -10,7 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.8.2",
-    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.48.0",
     "nuxt": "^3.7.0",
@@ -21,8 +22,12 @@
     "pg": "^8.11.3"
   },
   "eslintConfig": {
-    "extends": "@nuxt/eslint-config",
+    "extends": "@nuxtjs/eslint-config-typescript",
     "rules": {
+      "curly": [
+        "error",
+        "multi-or-nest"
+      ],
       "semi": [
         "error",
         "never"

@@ -9,7 +9,7 @@ export default function () {
       host: runtimeConfig.pgHost,
       database: runtimeConfig.pgDatabase,
       user: runtimeConfig.pgUser,
-      password: runtimeConfig.pgPassword,
-    },
+      password: runtimeConfig.pgPassword
+    }
   })
 }

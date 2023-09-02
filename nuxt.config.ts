@@ -5,6 +5,6 @@ export default defineNuxtConfig({
     pgHost: '',
     pgDatabase: '',
     pgUser: '',
-    pgPassword: '',
+    pgPassword: ''
   }
 })
